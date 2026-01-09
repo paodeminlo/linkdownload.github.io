@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link do Download— Download</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      background: linear-gradient(180deg, #0c0f1a, #0a1c2c);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      color:#e6f0ff;
+    }
+
+    .blob {
+      position:absolute;
+      width:480px;
+      height:480px;
+      border-radius:50%;
+      filter: blur(70px);
+      opacity:0.45;
+      animation: float 9s ease-in-out infinite alternate;
+    }
+    .blob.a { background:#00a2ff55; top:-120px; left:-120px; }
+    .blob.b { background:#ff6b6b44; bottom:-150px; right:-150px; animation-duration:12s; }
+
+    @keyframes float {
+      0% { transform: translate(0,0); }
+      100% { transform: translate(60px, 60px); }
+    }
+
+    .card {
+      position:relative;
+      background: rgba(255,255,255,0.05);
+      border-radius:20px;
+      padding:40px;
+      max-width:780px;
+      width:90%;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 40px #00000055;
+      z-index:2;
+      animation: fadeUp .8s ease forwards;
+      opacity:0;
+    }
+
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(20px); }
+      to { opacity:1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size:32px;
+      margin-bottom:12px;
+      font-weight:700;
+    }
+
+    p {
+      font-size:15px;
+      opacity:0.9;
+      line-height:1.5;
+    }
+
+    .download-btn {
+      display:inline-block;
+      margin-top:24px;
+      padding:16px 26px;
+      font-size:17px;
+      font-weight:700;
+      text-decoration:none;
+      color:#081019;
+      background: linear-gradient(90deg, #ffb86b, #ff6b6b);
+      border-radius:12px;
+      box-shadow:0 8px 30px rgba(255,184,107,0.25);
+      transition:.2s ease;
+      animation:pulse 2s infinite;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow:0 12px 40px rgba(255,184,107,0.35);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow:0 6px 22px rgba(255,184,107,0.18); }
+      50% { box-shadow:0 10px 32px rgba(255,184,107,0.28); }
+      100% { box-shadow:0 6px 22px rgba(255,184,107,0.18); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blob a"></div>
+  <div class="blob b"></div>
+
+  <div class="card">
+    <h1>Delta Lite</h1>
+    <p>Link do Download, clique no botão para prosseguir.</p>
+
+    <a
+      class="download-btn"
+      href="https://www.mediafire.com/file/jjg18ehr82998i4/%25F0%259F%259F%25A2_DELTA_VNG_SUPER_LITE_64B.apk/file"
+      target="_blank"
+      rel="noopener"
+    >
+     Final
+    </a>
+  </div>
+
+</body>
+</html>
